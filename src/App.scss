@@ -1,0 +1,20 @@
+@import "../src/style/global.scss";
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+main{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.banner{
+  width: 100%;
+  height: 40rem;
+}

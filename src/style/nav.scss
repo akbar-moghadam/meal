@@ -1,0 +1,121 @@
+@import "mixin";
+@import "global";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(95%);
+  height: 100%;
+
+  overflow: hidden;
+}
+.nav-list {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 20px;
+  width: min(95%);
+  height: 100%;
+  place-content: center;
+  place-items: center;
+  overflow: hidden; 
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  position: inherit;
+  opacity: 1;
+  overflow: hidden;
+  
+
+  @include mobile {
+    opacity: 0;
+  }
+}
+.subnav, .subnavactive{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.subnav {
+
+  overflow: hidden;
+ 
+}
+.subnavactive {
+ 
+ 
+  overflow: hidden;
+ background-color: $sefid;
+ border-bottom: $sefid solid 3px;
+ border-bottom-left-radius: 30px;
+ border-bottom-right-radius: 30px;
+ 
+ 
+}
+.subnavbtn {
+  padding: 20px;
+  border: none;
+  background-color: $narenji;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  height: 11rem;
+  box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
+  z-index: 1;
+  overflow: hidden;
+  
+ 
+}
+.submenu {
+  display: none;
+ 
+}
+
+.menu-icon {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+
+  @include mobile {
+    opacity: 1;
+  }
+}
+.login-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mobile {
+    display: none;
+  }
+}
+
+.brand-list{
+  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
